@@ -1,6 +1,12 @@
 import ProductItem from "@/components/derived/ProductItem";
 import { ProductApiResponse } from "@/types/Products";
 import Error from "./error";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Global Square Products",
+  description: "Products of Global Square Products",
+};
 
 const page = async () => {
   const response = await fetch("https://dummyjson.com/products?skip=85");

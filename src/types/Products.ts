@@ -7,6 +7,7 @@ export interface Products {
   description?: string;
   brand?: string;
   warrantyInformation?: string;
+  category?: string;
 }
 
 export interface ProductApiResponse {

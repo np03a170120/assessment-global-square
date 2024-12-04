@@ -4,9 +4,16 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Global Square IT",
+  title: {
+    default: "Global Square Assessment",
+    template: "%s | Global Square Assessment",
+  },
   description: "Assessment of Global Square IT",
-  // metadataBase: new URL(""),
+  metadataBase: new URL("https://assessment-global-square.vercel.app/"),
+  keywords: ["assessment", "global square it"],
+  openGraph: {
+    description: "Assessment of Global Square IT ",
+  },
 };
 
 const inter = Inter({ subsets: ["latin"] });

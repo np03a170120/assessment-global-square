@@ -1,5 +1,4 @@
 import { Products } from "@/types/Products";
-import React from "react";
 import Product from "./Product";
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {

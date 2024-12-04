@@ -1,16 +1,13 @@
 import { Products } from "@/types/Products";
-import { Metadata } from "next";
 import Product from "./Product";
 
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
-}): Promise<Metadata> {
-  const resolvedParams = await params;
-  const response = await fetch(
-    `https://dummyjson.com/products/${resolvedParams.id}`
-  );
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const response = await fetch(`https://dummyjson.com/products/${id}`);
   const data: Products = await response.json();
 
   return {
@@ -20,19 +17,17 @@ export async function generateMetadata({
       images: data.thumbnail,
       title: data.title,
       description: data.description,
-      url: `https://dummyjson.com/products/${resolvedParams.id}`,
+      url: `https://dummyjson.com/products/${id}`,
     },
   };
 }
 
-const Page = async ({ params }: { params: { id: string } }) => {
-  const resolvedParams = await params;
-  const response = await fetch(
-    `https://dummyjson.com/products/${resolvedParams.id}`
-  );
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const response = await fetch(`https://dummyjson.com/products/${id}`);
   const data: Products = await response.json();
 
   return <Product {...data} />;
 };
 
-export default Page;
+export default page;

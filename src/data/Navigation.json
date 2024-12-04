@@ -1,26 +1,32 @@
 [
   {
     "title": "Home",
-    "link": "/"
+    "link": "/",
+    "isDisabled": false
   },
   {
     "title": "Product",
-    "link": "/product"
+    "link": "/product",
+    "isDisabled": false
   },
   {
     "title": "Categories",
-    "link": "/categories"
+    "link": "/categories",
+    "isDisabled": true
   },
   {
     "title": "About",
-    "link": "/about"
+    "link": "/about",
+    "isDisabled": true
   },
   {
     "title": "Contact",
-    "link": "/contact"
+    "link": "/contact",
+    "isDisabled": true
   },
   {
     "title": "FAQs",
-    "link": "/faqs"
+    "link": "/faqs",
+    "isDisabled": true
   }
 ]

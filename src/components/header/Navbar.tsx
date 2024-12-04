@@ -15,8 +15,8 @@ const Navbar = () => {
               <Link
                 className={`text-semibold text-[0.875rem] ${
                   currentPath === item.link ? "font-semibold text-primary" : ""
-                }`}
-                href={item.link}
+                } `}
+                href={!item.isDisabled ? item.link : "/"}
               >
                 {item.title}
               </Link>

@@ -45,7 +45,7 @@ const ProductList = ({ data }: { data: ProductApiResponse }) => {
           currentPage={currentPage}
         />
       </div>
-      <div className="h-[100vh] w-full overflow-visible relative ">
+      <div className="h-[110vh] w-full overflow-visible relative ">
         <AutoSizer>
           {({ height, width }) => {
             const columnWidth = Math.floor(width / columnCount);

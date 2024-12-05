@@ -13,6 +13,7 @@ export default {
         seconday: " #F5F5F5",
         text: "#333333",
         accent: "#FF6347",
+        txtbody: "#666666",
       },
     },
   },

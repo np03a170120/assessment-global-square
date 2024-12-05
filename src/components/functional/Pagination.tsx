@@ -26,7 +26,7 @@ const Pagination = ({
                   className={`${
                     page === currentPage
                       ? "bg-accent text-white"
-                      : " bg-gray-100 text-gray-400"
+                      : "  text-gray-400"
                   } h-6 w-6 rounded-full text-md `}
                   onClick={() => setCurrentPage(page)}
                 >

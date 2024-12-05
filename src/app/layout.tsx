@@ -1,7 +1,8 @@
-import Header from "@/components/header/Header";
+import Header from "@/components/ui/header/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/ui/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -6,13 +6,13 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import { FixedSizeGrid as Grid } from "react-window";
 
 const ProductList = ({ data }: { data: ProductApiResponse }) => {
-  const [columnCount, setColumnCount] = useState(4);
+  const [columnCount, setColumnCount] = useState(5);
 
   useEffect(() => {
     const updateColumnCount = () => {
       const width = window.innerWidth;
       if (width >= 1200) {
-        setColumnCount(4);
+        setColumnCount(5);
       } else if (width >= 768) {
         setColumnCount(3);
       } else {
@@ -24,11 +24,10 @@ const ProductList = ({ data }: { data: ProductApiResponse }) => {
   }, []);
 
   return (
-    <div className="h-[100vh] w-full">
+    <div className="h-[100vh] w-full overflow-visible">
       <AutoSizer>
         {({ height, width }) => {
           const columnWidth = Math.floor(width / columnCount);
-
           return (
             <Grid
               itemData={data}
@@ -38,6 +37,7 @@ const ProductList = ({ data }: { data: ProductApiResponse }) => {
               rowHeight={380}
               height={height}
               width={width}
+              className=""
             >
               {({ data, columnIndex, rowIndex, style }) => {
                 const index = rowIndex * columnCount + columnIndex;

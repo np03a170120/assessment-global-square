@@ -6,8 +6,8 @@ const page = async () => {
   const data: ProductApiResponse = await response.json();
 
   return (
-    <div className="container mx-auto my-6">
-      {data.products.length > 0 && <ProductList data={data} />}
+    <div className="container mx-auto py-6 ">
+      <ProductList data={data} />
     </div>
   );
 };

@@ -13,9 +13,9 @@ const Product = ({
 }: Products) => {
   const [quantity, setQuantity] = useState<number>(1);
   return (
-    <div className="container mx-auto p-6 rounded-md mt-6 bg-white ">
-      <div className="flex gap-6">
-        <div className="bg-gray-100 rounded-md ">
+    <div className="container mx-auto mt-6 lg:bg-white  ">
+      <div className="gap-6  w-fit bg-white p-6 rounded-md md:flex  ">
+        <div className="bg-gray-100 rounded-md  ">
           <Image
             loading="lazy"
             width={500}
@@ -24,7 +24,7 @@ const Product = ({
             src={thumbnail}
           />
         </div>
-        <div className="w-[32rem] flex flex-col justify-between">
+        <div className="w-fit lg:w-[32rem] flex justify-between flex-col">
           <div>
             <span className=" text-accent font-semibold text-sm">{brand}</span>
             <h1 className="text-xl font-semibold mb-1 mt-3 ">{title}</h1>
@@ -58,7 +58,6 @@ const Product = ({
               </button>
             </div>
           </div>
-
           <div>
             <span className="text-xs text-gray-500">
               Warranty Information: {warrantyInformation}

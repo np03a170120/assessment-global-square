@@ -13,16 +13,16 @@ const ProductItem = ({ thumbnail, price, title, id }: Products) => {
       onClick={handleProductClick}
       className="flex flex-col cursor-pointer pb-2"
     >
-      <div className="m-3 rounded-lg bg-white ">
+      <div className="m-3 rounded-lg bg-white hover:shadow-md  ">
         <Image
           loading="lazy"
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           alt={title}
-          className="h-64 w-full object-contain"
+          className="h-64 w-full object-cover"
           src={thumbnail}
         />
-        <div className="flex-grow p-5 pt-0">
+        <div className="flex-grow p-5 ">
           <h5 className="mb-1 text-md font-normal line-clamp-1">{title}</h5>
           <p className="mb-3 font-medium text-lg">Rs.{price}</p>
         </div>

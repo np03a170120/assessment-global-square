@@ -10,16 +10,6 @@
     "isDisabled": false
   },
   {
-    "title": "Categories",
-    "link": "/categories",
-    "isDisabled": true
-  },
-  {
-    "title": "About",
-    "link": "/about",
-    "isDisabled": true
-  },
-  {
     "title": "Contact",
     "link": "/contact",
     "isDisabled": true

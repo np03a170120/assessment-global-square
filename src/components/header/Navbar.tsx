@@ -8,7 +8,7 @@ const Navbar = () => {
   const currentPath = usePathname();
   return (
     <div className=" bg-white shadow-sm">
-      <nav className="  container  mx-auto p-4 py-3  h-full w-full bg-secondary  ">
+      <nav className="  container  mx-auto overflow-x-scroll p-4 py-3  h-full w-full bg-secondary  ">
         <ul className="flex gap-4">
           {navlinks.map((item, index) => (
             <li key={index}>

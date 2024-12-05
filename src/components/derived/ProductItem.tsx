@@ -22,9 +22,11 @@ const ProductItem = ({ thumbnail, price, title, id }: Products) => {
           className="h-64 w-full object-cover"
           src={thumbnail}
         />
-        <div className="flex-grow p-5 ">
-          <h5 className="mb-1 text-md font-normal line-clamp-1">{title}</h5>
-          <p className="mb-3 font-medium text-lg">Rs.{price}</p>
+        <div className="flex-grow p-4 ">
+          <h5 className="mb-1 text-md text-text font-normal line-clamp-1">
+            {title}
+          </h5>
+          <p className="font-medium text-lg">Rs.{price}</p>
         </div>
       </div>
     </div>

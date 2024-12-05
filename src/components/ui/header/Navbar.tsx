@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import navlinks from "../../data/Navigation.json";
+import navlinks from "@/data/Navigation.json";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {

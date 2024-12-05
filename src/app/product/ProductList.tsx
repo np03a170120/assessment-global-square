@@ -34,8 +34,8 @@ const ProductList = ({ data }: { data: ProductApiResponse }) => {
 
   return (
     <div>
-      <div className="flex items-center  py-6">
-        <h1 className="text-lg font-semibold  text-secondary pl-4 w-full">
+      <div className="flex items-center py-4 cursor-pointer">
+        <h1 className="text-lg font-semibold   text-secondary pl-4 w-full">
           Men&apos;s Choices
         </h1>
         <Pagination
@@ -56,10 +56,9 @@ const ProductList = ({ data }: { data: ProductApiResponse }) => {
                   columnCount={columnCount}
                   columnWidth={columnWidth}
                   rowCount={Math.ceil(currentProducts.length / columnCount)}
-                  rowHeight={380}
+                  rowHeight={360}
                   height={height}
                   width={width}
-                  className=""
                 >
                   {({ data, columnIndex, rowIndex, style }) => {
                     const index = rowIndex * columnCount + columnIndex;

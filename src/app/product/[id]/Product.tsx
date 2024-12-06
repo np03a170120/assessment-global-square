@@ -13,8 +13,8 @@ const Product = ({
 }: Products) => {
   const [quantity, setQuantity] = useState<number>(1);
   return (
-    <div className="container mx-auto mt-6 lg:bg-white h-[100vh] ">
-      <div className="gap-6  w-fit bg-white p-6 rounded-md md:flex  ">
+    <div className="container mx-auto mt-6 lg:bg-white h-[100vh]">
+      <div className="gap-6 w-fit bg-white p-6 rounded-md md:flex ">
         <div className="bg-gray-100 rounded-md  ">
           <Image
             loading="lazy"
@@ -27,11 +27,13 @@ const Product = ({
         <div className="w-fit lg:w-[32rem] flex justify-between flex-col">
           <div>
             <span className=" text-accent font-semibold text-sm">{brand}</span>
-            <h1 className="text-xl font-semibold mb-1 mt-3 ">{title}</h1>
-            <h2 className="text-lg font-medium mb-4">Rs.{price}</h2>
+            <h1 className="text-xl text-text font-semibold mb-1 mt-3 ">
+              {title}
+            </h1>
+            <h2 className="text-lg text-text font-medium mb-4">Rs.{price}</h2>
             <p className="text-txtbody">{description}</p>
 
-            <p className="mt-8 text-md text-text mb-2 font-medium underline">
+            <p className="mt-4 md:mt-8 text-md text-text mb-2 font-medium underline">
               Quantity
             </p>
 
@@ -58,8 +60,8 @@ const Product = ({
               </button>
             </div>
           </div>
-          <div>
-            <span className="text-xs text-gray-500">
+          <div className="py-6 ">
+            <span className="text-xs text-txtbody ">
               Warranty Information: {warrantyInformation}
             </span>
             <button className="w-full bg-accent border text-white px-6 py-2 rounded-md mt-3">

@@ -9,7 +9,6 @@ import { FixedSizeGrid as Grid } from "react-window";
 const ProductList = ({ data }: { data: ProductApiResponse }) => {
   const [columnCount, setColumnCount] = useState(5);
   const [products] = useState<Products[]>(data.products);
-
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [productsPerPage] = useState<number>(10);
 
@@ -36,7 +35,7 @@ const ProductList = ({ data }: { data: ProductApiResponse }) => {
     <div>
       <div className="flex items-center py-4 cursor-pointer">
         <h1 className="text-lg font-semibold   text-secondary pl-4 w-full">
-          Men&apos;s Choices
+          Node&apos;s Choices
         </h1>
         <Pagination
           totalProducts={data.products.length}

@@ -19,7 +19,7 @@ const ProductItem = ({ thumbnail, price, title, id }: Products) => {
           width={200}
           height={200}
           alt={title}
-          className="h-64 w-full object-cover"
+          className="h-64 w-full object-contain"
           src={thumbnail}
         />
         <div className="flex-grow p-4 ">

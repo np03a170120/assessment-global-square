@@ -1,24 +1,37 @@
 "use client";
 import Link from "next/link";
-import React from "react";
 
 interface ErorrType {
   isProductNull?: boolean;
 }
 
 const Error = ({ isProductNull }: ErorrType) => {
-  const errorTitle = isProductNull
-    ? "Product is not available at the moment"
-    : "Something went wrong, Please try again later.";
+  const errorMessage = {
+    productNull: {
+      title: "Product Unavailable",
+      description:
+        "Product is not available at the moment. Please try again later",
+    },
+    apiError: {
+      title: " Error Occured!",
+      description: "Something went wrong, Please try again later.",
+    },
+  };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto h-[100vh]">
       <div className="flex h-[12rem] mt-12 items-center justify-center">
         <div>
           <h1 className="text-gray-900 text-xl font-semibold mb-2">
-            Error Occured!
+            {isProductNull
+              ? errorMessage.productNull.title
+              : errorMessage.apiError.title}
           </h1>
-          <p className="text-gray-600 pb-2">{errorTitle}</p>
+          <p className="text-gray-600 pb-2">
+            {isProductNull
+              ? errorMessage.productNull.description
+              : errorMessage.apiError.description}
+          </p>
           <Link
             href={"/"}
             className="text-sm underline text-primary cursor-pointer"

@@ -7,7 +7,7 @@ Follow these steps to set up the project on your local machine:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/np03a170120/outside-assignment-task-1.git
+   git clone https://github.com/np03a170120/assessment-global-square.git
    ```
 
 2. **Install Dependencies:**
